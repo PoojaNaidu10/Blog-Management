@@ -6,6 +6,7 @@ const createBlogs = async function (req, res) {
     try {
        
         let data = req.body
+        data.publishedAt=Date.now()
         let body = req.body.body
         let authorId = data.authorId
         let title = req.body.title
